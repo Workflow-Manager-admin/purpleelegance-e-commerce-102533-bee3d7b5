@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(90deg, #d2b4de11 90%, #6c348307 100%);
   border: 1px solid var(--luxury-accent);
   font-family: var(--font-secondary);
-  color: var(--luxury-secondary);
+  color: #fff; /* Wishlist section text white for contrast */
   text-align: left;
   box-shadow: 0 1.5px 11px 0 rgba(174,171,163,0.09);
   max-width: 420px;
@@ -369,7 +369,7 @@ h1, h2, h3, h4, h5, h6 {
 .wishlist-title {
   font-size: 1.17rem;
   font-weight: 700;
-  color: var(--luxury-primary);
+  color: #fff; /* White wishlist title for visibility */
   margin-bottom: 8px;
   display: inline-block;
 }
