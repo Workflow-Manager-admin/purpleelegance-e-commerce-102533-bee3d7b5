@@ -186,9 +186,17 @@ function Footer() {
 
 // PUBLIC_INTERFACE
 function App() {
+  // Compute the background image public URL for the main container root
+  const bgImage = `${process.env.PUBLIC_URL || ""}/bg-luxury-movie-explorer.jpg`;
   // Visually rich luxury e-commerce homepage layout
   return (
-    <div className="app">
+    <div
+      className="app"
+      style={{
+        background: `linear-gradient(120deg, rgba(108,52,131,0.66) 8%, rgba(210,180,222,0.11) 88%), 
+          url("${bgImage}") center center/cover no-repeat fixed`
+      }}
+    >
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="container navbar-row">
           <div className="logo" tabIndex={0} aria-label="Luxe Purple Cosmetics Home">
