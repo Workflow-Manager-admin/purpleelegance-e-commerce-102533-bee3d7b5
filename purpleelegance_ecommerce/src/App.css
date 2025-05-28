@@ -401,11 +401,11 @@ h1, h2, h3, h4, h5, h6 {
 .review-title {
   font-size: 1.17rem;
   font-weight: 600;
-  color: var(--luxury-primary);
+  color: #fff; /* Ensure review section headers are white */
   margin-bottom: 4px;
 }
 .review-placeholder {
-  color: var(--luxury-secondary);
+  color: #fff; /* Customer review content readable on all backgrounds */
   font-size: 0.98rem;
   margin-top: 7px;
 }
