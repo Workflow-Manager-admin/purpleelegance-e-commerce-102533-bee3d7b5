@@ -139,6 +139,13 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(98deg, rgba(108,52,131,0.07) 70%, rgba(210,180,222,0.16) 100%);
   border-radius: 0 0 48px 48px/0 0 24px 24px;
   box-shadow: 0 2px 28px 0 rgba(108,52,131,0.06);
+
+  /* Mobile fade-in animation for luxury */
+  animation: fadeInHero 1.2s cubic-bezier(.53,.21,.29,1.01) 0.1s both;
+}
+@keyframes fadeInHero {
+  from { opacity: 0; transform: translateY(22px) scale(0.98);}
+  to { opacity: 1; transform: none; }
 }
 
 .hero-cta {
