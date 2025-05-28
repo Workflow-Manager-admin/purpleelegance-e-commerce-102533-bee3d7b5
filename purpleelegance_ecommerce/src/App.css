@@ -426,13 +426,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .footer-brand {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-family: var(--font-primary);
   font-weight: 700;
   color: var(--luxury-accent);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07em;
   margin-bottom: 2px;
-  text-shadow: 0 1px 4px rgba(108,52,131,0.09);
+  text-shadow: 0 1px 4px rgba(108,52,131,0.11);
 }
 .footer-links {
   display: flex;
@@ -442,18 +442,20 @@ h1, h2, h3, h4, h5, h6 {
 .footer-links a {
   color: var(--luxury-secondary);
   text-decoration: none;
-  font-size: 1.03rem;
+  font-size: 1.06rem;
   font-weight: 500;
   transition: color 0.2s;
+  font-family: var(--font-secondary);
+  letter-spacing: 0.025em;
 }
 .footer-links a:focus, .footer-links a:hover {
   color: var(--luxury-accent);
 }
 .footer-meta {
-  font-size: 0.97rem;
+  font-size: 0.99rem;
   color: var(--luxury-secondary);
   font-family: var(--font-secondary);
-  opacity: 0.9;
+  opacity: 0.93;
 }
 
 /* Responsive design */
