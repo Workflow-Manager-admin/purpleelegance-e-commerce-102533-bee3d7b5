@@ -13,31 +13,37 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  font-family: var(--font-primary);
+  background: var(--luxury-gradient) fixed;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: rgba(255,255,255, 0.02);
 }
 
 .navbar {
-  background-color: var(--kavia-dark);
-  padding: 16px;
+  background: linear-gradient(87deg, #6C3483 85%, #aeaba3 110%);
+  box-shadow: var(--shadow-elevate);
+  padding: 18px 0 16px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1.5px solid var(--luxury-accent);
   position: fixed;
   top: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
+  font-family: var(--font-secondary);
+  transition: box-shadow 0.25s ease;
 }
 
 .logo {
