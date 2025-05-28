@@ -343,12 +343,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.08rem;
   font-weight: 600;
   margin: 8px 0 2px 0;
-  color: var(--luxury-primary);
+  color: #fff; /* Force product card headline to white */
   text-align: center;
 }
 .product-tagline {
   font-size: 0.97rem;
-  color: var(--luxury-secondary);
+  color: #f7f5ff; /* Slight off-white for subtlety but highly visible */
   margin-bottom: 10px;
   font-family: var(--font-secondary);
 }
