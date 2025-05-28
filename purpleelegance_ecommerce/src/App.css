@@ -15,20 +15,34 @@
 
 body {
   margin: 0;
-  font-family: var(--font-primary);
+  font-family: var(--font-luxury);
   background: var(--luxury-gradient) fixed;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   letter-spacing: 0.01em;
+  font-size: 1.01rem;
+  line-height: 1.55;
+  transition: background 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  margin: 0 0 0.45em 0;
+  line-height: 1.12;
+  color: var(--luxury-primary);
+  letter-spacing: 0.035em;
+  text-shadow: 0 1.5px 16px rgba(170,162,204,0.09);
 }
 
 .app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   background: rgba(255,255,255, 0.02);
+  min-width: 0;
 }
 
 .navbar {
@@ -40,11 +54,12 @@ body {
   border-bottom: 1.5px solid var(--luxury-accent);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   box-sizing: border-box;
   z-index: 100;
   font-family: var(--font-secondary);
   transition: box-shadow 0.25s ease;
+  min-width: 0;
 }
 
 .navbar-row {
