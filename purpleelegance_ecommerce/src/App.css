@@ -74,11 +74,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 9px;
-  color: var(--luxury-accent);
+  color: #fff; /* White logo text for strong contrast on purple navbar */
   letter-spacing: 0.03em;
   font-family: var(--font-primary);
   text-transform: uppercase;
-  text-shadow: 0 1px 4px rgba(108,52,131,0.10);
+  text-shadow: 0 1px 8px rgba(108,52,131,0.13);
   cursor: pointer;
   outline: none;
 }
@@ -100,21 +100,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
 }
 .nav-links a {
-  color: var(--luxury-accent);
+  color: #fff; /* White for best readability; ensures not purple-on-purple */
   font-weight: 600;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.07rem;
   letter-spacing: 0.03em;
   padding: 3px 0 3px 0;
-  border-bottom: 2.5px solid rgba(174,171,163,0);
-  transition: border-bottom-color 0.20s;
+  border-bottom: 2.5px solid rgba(255,255,255,0); /* Transparent by default */
+  transition: border-bottom-color 0.20s, color 0.2s;
   background: none;
   outline: none;
 }
 .nav-links a:focus, .nav-links a:hover {
-  color: var(--luxury-secondary);
-  border-bottom: 2.5px solid var(--luxury-secondary);  
+  color: #fffde8; /* Subtle warm white on hover */
+  border-bottom: 2.5px solid #fffde8;  
 }
 
 .container {
