@@ -9,6 +9,8 @@
   --shadow-elevate: 0 2px 16px 0 rgba(108,52,131,0.10),0 0.5px 2px 0 rgba(174,171,163,0.12);
   --font-primary: 'Playfair Display', 'Inter', serif;
   --font-secondary: 'Inter', 'Roboto', 'Helvetica', sans-serif;
+  --font-luxury: 'Playfair Display', 'Cormorant Garamond', 'Quicksand', 'Inter', serif;
+  --luxury-spacing-unit: 18px;
 }
 
 body {
