@@ -91,16 +91,29 @@ body {
 }
 
 .subtitle {
-  color: var(--kavia-orange);
-  font-weight: 500;
-  font-size: 1.1rem;
+  color: var(--luxury-secondary);
+  font-weight: 600;
+  font-size: 1.11rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+  font-family: var(--font-secondary);
+  background: linear-gradient(90deg, #aeaba3, #6C3483 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .title {
-  font-size: 3.5rem;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 3.7rem;
+  font-weight: 700;
+  line-height: 1.14;
   margin: 0;
+  font-family: var(--font-primary);
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #aeaba3 12%, #6C3483 63%, #D2B4DE 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .description {
