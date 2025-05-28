@@ -1,9 +1,14 @@
 :root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --luxury-primary: #6C3483;       /* Rich Purple */
+  --luxury-secondary: #D2B4DE;     /* Soft Lavender */
+  --luxury-accent: #aeaba3;        /* Silvery Accent */
+  --luxury-gradient: linear-gradient(90deg, #6C3483 0%, #aeaba3 100%);
+  --text-color: #f8f6fa;
+  --text-secondary: #cfc8e2;
+  --border-color: rgba(174, 171, 163, 0.16);
+  --shadow-elevate: 0 2px 16px 0 rgba(108,52,131,0.10),0 0.5px 2px 0 rgba(174,171,163,0.12);
+  --font-primary: 'Playfair Display', 'Inter', serif;
+  --font-secondary: 'Inter', 'Roboto', 'Helvetica', sans-serif;
 }
 
 body {
