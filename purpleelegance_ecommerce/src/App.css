@@ -153,16 +153,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .subtitle {
-  color: var(--luxury-secondary);
+  color: #fff; /* White subtitle for hero/section over purple */
   font-weight: 600;
   font-size: 1.11rem;
   letter-spacing: 0.08em;
   margin-bottom: 4px;
   font-family: var(--font-secondary);
-  background: linear-gradient(90deg, #aeaba3, #6C3483 90%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  /* Remove background clip to avoid washed-out effect */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 .title {
@@ -172,20 +173,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: var(--font-primary);
   letter-spacing: 0.03em;
-  background: linear-gradient(90deg, #aeaba3 12%, #6C3483 63%, #D2B4DE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff; /* White for hero/section titles where background is purple/dark */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 
 .description {
   font-size: 1.18rem;
   line-height: 1.5;
-  color: var(--text-secondary);
+  color: #fffde9; /* very light off-white for contrast over dark/purple */
   max-width: 700px;
   margin-bottom: 18px;
   font-family: var(--font-secondary);
-  text-shadow: 0 0.5px 2px rgba(210,180,222,0.15);
+  text-shadow: 0 0.5px 2px rgba(54,7,56,0.05);
 }
 
 .btn {
@@ -261,11 +263,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.025em;
   margin-bottom: 28px;
-  color: var(--luxury-primary);
-  background: linear-gradient(90deg, #6C3483 45%, #aeaba3 95%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff; /* Override to white for strong visibility */
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  background-clip: initial;
 }
 .products-grid {
   display: grid;
