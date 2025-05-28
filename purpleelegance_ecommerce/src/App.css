@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn {
   background: linear-gradient(93deg, #6C3483 87%, #aeaba3 115%);
-  color: #fffefa;
+  color: #fff; /* Button text always pure white for accessibility */
   border: 0.5px solid var(--luxury-accent);
   border-radius: 26px;
   box-shadow: 0 1.5px 8px 0 rgba(174,171,163,0.08);
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-secondary);
   letter-spacing: 0.01em;
   cursor: pointer;
-  transition: background 0.18s, box-shadow 0.18s;
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
   outline: none;
   text-shadow: none;
 }
@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .btn:hover {
   background: radial-gradient(ellipse at 70% 60%, #D2B4DE 20%, #6C3483 90%);
-  color: #f4f2f7;
+  color: #fffde0; /* Near-white on hover/focus for interactive feedback but never purple */
   box-shadow: 0 2px 16px 0 rgba(210,180,222,0.11);
 }
 .btn-large {
@@ -386,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.88rem;
   font-family: var(--font-secondary);
   margin-left: 16px;
-  color: var(--luxury-secondary);
+  color: #fff; /* Ensure checkout meta text is visible on purple */
 }
 
 /* Customer Reviews */
