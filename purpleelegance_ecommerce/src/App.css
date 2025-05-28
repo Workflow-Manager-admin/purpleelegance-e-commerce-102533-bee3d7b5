@@ -414,7 +414,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   margin-top: 70px;
   background: linear-gradient(92deg, #6C3483 80%, #aeaba3 105%);
-  color: var(--luxury-accent);
+  color: #fff; /* Footer default text is white */
   padding: 34px 0 20px 0;
   border-top: 1.5px solid var(--luxury-accent);
   box-shadow: 0 1.5px 13px 0 rgba(174,171,163,0.10);
@@ -431,10 +431,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.35rem;
   font-family: var(--font-primary);
   font-weight: 700;
-  color: var(--luxury-accent);
+  color: #fff; /* Brand is always white */
   letter-spacing: 0.07em;
   margin-bottom: 2px;
-  text-shadow: 0 1px 4px rgba(108,52,131,0.11);
+  text-shadow: 0 1px 8px rgba(108,52,131,0.13);
 }
 .footer-links {
   display: flex;
@@ -442,7 +442,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 3px;
 }
 .footer-links a {
-  color: var(--luxury-secondary);
+  color: #fff; /* Always white footer nav links */
   text-decoration: none;
   font-size: 1.06rem;
   font-weight: 500;
@@ -451,11 +451,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.025em;
 }
 .footer-links a:focus, .footer-links a:hover {
-  color: var(--luxury-accent);
+  color: var(--luxury-accent); /* Accent for hover, to distinguish */
 }
 .footer-meta {
   font-size: 0.99rem;
-  color: var(--luxury-secondary);
+  color: var(--luxury-secondary); /* fine for meta (copyright) */
   font-family: var(--font-secondary);
   opacity: 0.93;
 }
