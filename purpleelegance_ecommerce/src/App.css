@@ -458,20 +458,50 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.93;
 }
 
-/* Responsive design */
+/* ===== Responsive design - extra breakpoints for luxury layout ==== */
+
+/* Tablet and below */
+@media (max-width: 990px) {
+  .container {
+    padding: 0 10vw;
+    min-width: 0;
+    gap: 1.9rem;
+  }
+}
+
+/* Large Mobile/Tablet - Navigation stacks, reduce paddings */
 @media (max-width: 700px) {
-  .navbar-row, .footer-row, .container {
+  .navbar-row, .footer-row {
     flex-direction: column;
     gap: 18px;
     align-items: flex-start;
+    width: 100%;
   }
-  .hero { padding-top: 97px; padding-bottom: 44px; }
-  .products-grid { flex-direction: column; gap: 20px;}
-  .section-title { font-size: 1.43rem; }
+  .container {
+    gap: 22px;
+    padding: 0 3vw;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero { padding-top: 87px; padding-bottom: 34px; }
+  .products-grid { grid-template-columns: 1fr; gap: 20px;}
+  .section-title { font-size: 1.53rem; }
   .title { font-size: 2.17rem; }
+  .footer { padding: 18px 0 11px 0; }
 }
+
+/* Small mobile */
 @media (max-width: 460px) {
-  .logo { font-size: 1.1rem; }
-  .nav-links { gap: 12px; font-size: 0.96rem; }
-  .footer-brand { font-size: 1.05rem;}
+  .logo { font-size: 1.01rem; }
+  .nav-links { gap: 10px; font-size: 0.93rem; }
+  .footer-brand { font-size: 1.02rem;}
+  .hero { padding-top: 61px; padding-bottom: 24px;}
+  .product-card { max-width: 100vw; min-width: 0; padding: 12px 6px; }
+}
+
+/* Hide nav links except menu (if mobile nav is implemented) */
+@media (max-width: 390px) {
+  .footer-links { flex-direction: column; gap: 14px;}
+  .footer-brand { font-size: 0.91rem; }
 }
