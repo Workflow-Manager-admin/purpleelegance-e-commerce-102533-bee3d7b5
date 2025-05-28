@@ -123,6 +123,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 28px;
   width: 100%;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--luxury-spacing-unit);
 }
 
 .hero {
