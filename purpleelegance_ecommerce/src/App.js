@@ -3,7 +3,7 @@ import './App.css';
 
 // PUBLIC_INTERFACE
 /**
- * ProductCard displays a luxury cosmetic product using a real royalty-free image and premium styling.
+ * ProductCard displays a luxury cosmetic product with a real royalty-free image and premium info.
  */
 function ProductCard({ product }) {
   return (
@@ -25,63 +25,56 @@ function ProductCard({ product }) {
       </div>
       <div className="product-details">
         <div className="product-name">{product.name}</div>
-        <div className="product-tagline">{product.tagline}</div>
+        <div className="product-tagline">{product.description}</div>
+        <div style={{fontWeight:700, color:'var(--luxury-accent)', margin: '5px 0'}}>
+          {product.price}
+        </div>
         <button className="btn btn-small" aria-label={`View details of ${product.name}`}>View</button>
       </div>
     </div>
   );
 }
 
-// Sample demo product images (royalty-free from Unsplash and Pexels)
+// Royalty-free mock products array
 const DEMO_PRODUCTS = [
   {
     id: 1,
-    name: "Radiant Veil Foundation",
-    tagline: "Full-Coverage | 18 Shades",
-    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&q=80",
-    category: "Foundation",
+    name: 'Radiant Glow Foundation',
+    description: 'A lightweight, long-wear liquid foundation with flawless coverage.',
+    price: '$42',
+    image: 'https://images.unsplash.com/photo-1512499617640-c2f999098c30?auto=format&fit=facearea&w=400&q=80',
+    category: 'Foundation'
   },
   {
     id: 2,
-    name: "Opulent Rose Lipstick",
-    tagline: "Satin Finish | Long-Lasting",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&q=80",
-    category: "Lipstick",
+    name: 'Velvet Shadows Palette',
+    description: 'Ten richly pigmented eyeshadows for day-to-night looks.',
+    price: '$58',
+    image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=facearea&w=400&q=80',
+    category: 'Eyeshadow'
   },
   {
     id: 3,
-    name: "Velvet Luxe Eyeshadow",
-    tagline: "12-Color Palette",
-    image: "https://images.pexels.com/photos/3373746/pexels-photo-3373746.jpeg?auto=compress&w=400&q=80",
-    category: "Eyeshadow",
+    name: 'Luxe Matte Lipstick',
+    description: 'Vibrant, hydrating matte lipstick for a stunning pout.',
+    price: '$29',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&q=80',
+    category: 'Lipstick'
   },
   {
     id: 4,
-    name: "Crystal Dew Serum",
-    tagline: "Hydrating | All Skin Types",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=400&q=80",
-    category: "Skincare",
-  },
-  {
-    id: 5,
-    name: "Illuminist Highlighter",
-    tagline: "Glow | Ultra-Fine Powder",
-    image: "https://images.pexels.com/photos/2064346/pexels-photo-2064346.jpeg?auto=compress&w=400&q=80",
-    category: "Highlighter",
-  },
-  {
-    id: 6,
-    name: "SilkTouch Setting Spray",
-    tagline: "24h Hold | Non-Sticky",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=facearea&w=400&q=80",
-    category: "Setting Spray",
-  },
+    name: 'Hydraplush Moisturizer',
+    description: 'Premium daily moisturizer for luminous, healthy skin.',
+    price: '$64',
+    image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=facearea&w=400&q=80',
+    category: 'Skincare'
+  }
 ];
 
-/**
- * ProductCatalog renders a grid of featured product cards with real images and luxury-themed info.
- */
 // PUBLIC_INTERFACE
+/**
+ * ProductCatalog renders a visually luxurious grid of real product cards.
+ */
 function ProductCatalog() {
   return (
     <section className="featured-products" id="catalog">
@@ -97,10 +90,10 @@ function ProductCatalog() {
 
 // PUBLIC_INTERFACE
 function ProductSearchFilter() {
-  /** Placeholder for search/filter UI */
+  /** Placeholder for search/filter UI, visually styled as disabled */
   return (
     <section className="filters-bar" aria-label="Product search and filters">
-      <input className="filter-input" type="text" placeholder="Search luxury products..." disabled />
+      <input className="filter-input" type="text" placeholder="Search products..." disabled />
       <select className="filter-select" disabled>
         <option>Category</option>
       </select>
@@ -110,18 +103,18 @@ function ProductSearchFilter() {
 
 // PUBLIC_INTERFACE
 function Wishlist() {
-  /** Placeholder for wishlist, but styled for a premium experience */
+  /** Styled wishlist section (not functional in demo) */
   return (
     <aside className="wishlist" id="wishlist" aria-label="Wishlist area">
       <span className="wishlist-title">Wishlist</span>
-      <div className="wishlist-items" style={{color: "#b188ce"}}>Sign in to save your favorite products ♥</div>
+      <div className="wishlist-items" style={{ color: "#b188ce" }}>Sign in to save your favorite products ♥</div>
     </aside>
   );
 }
 
 // PUBLIC_INTERFACE
 function CheckoutSection() {
-  /** Placeholder for checkout section, styled for premium look */
+  /** Styled checkout area, non-interactive placeholder */
   return (
     <section className="checkout-section" id="checkout" aria-label="Checkout area">
       <button className="btn btn-large" disabled>Proceed to Checkout</button>
@@ -132,21 +125,21 @@ function CheckoutSection() {
 
 // PUBLIC_INTERFACE
 function CustomerReviews() {
-  /** Demo customer reviews to make section visually functional */
+  /** Demo customer reviews using visually realistic style */
   const reviews = [
     {
       user: "Sophie L.",
-      content: "Absolutely in love with the Radiant Veil Foundation – the coverage is flawless and lasts all day!",
+      content: "Absolutely in love with the Radiant Glow Foundation – the coverage is flawless and lasts all day!",
       stars: 5,
     },
     {
       user: "Maya R.",
-      content: "Velvet Luxe Eyeshadow has the smoothest texture I've ever tried. Gorgeous colors!",
+      content: "Velvet Shadows Palette has the smoothest texture I've ever tried. Gorgeous colors!",
       stars: 5,
     },
     {
       user: "Claire F.",
-      content: "The Crystal Dew Serum makes my skin feel so soft. Packaging is so elegant too!",
+      content: "The Hydraplush Moisturizer makes my skin feel so soft. Packaging is so elegant too!",
       stars: 4,
     },
   ];
@@ -154,14 +147,14 @@ function CustomerReviews() {
     <section className="customer-reviews" aria-label="Customer reviews">
       <div className="review-title">Customer Reviews</div>
       {reviews.map((review, i) => (
-        <div key={i} style={{margin: "10px 0 18px 0", paddingBottom: 6, borderBottom: "1px solid #e9e5ee0d"}}>
+        <div key={i} style={{ margin: "10px 0 18px 0", paddingBottom: 6, borderBottom: "1px solid #e9e5ee0d" }}>
           <span style={{
             fontWeight: 600,
             color: "var(--luxury-primary)",
             fontFamily: "var(--font-secondary)",
             fontSize: "1rem",
           }}>{'★'.repeat(review.stars)}{'☆'.repeat(5 - review.stars)}</span>
-          <div className="review-placeholder" style={{marginTop: 0, color: "#6C3483"}}>{review.content}</div>
+          <div className="review-placeholder" style={{ marginTop: 0, color: "#6C3483" }}>{review.content}</div>
           <span style={{ color: "var(--luxury-secondary)", fontSize: "0.98rem" }}>– {review.user}</span>
         </div>
       ))}
@@ -171,7 +164,7 @@ function CustomerReviews() {
 
 // PUBLIC_INTERFACE
 function Footer() {
-  /** Elegant luxury-themed footer */
+  /** Elegant luxury-themed footer with links and branding */
   return (
     <footer className="footer">
       <div className="container footer-row">
@@ -193,6 +186,7 @@ function Footer() {
 
 // PUBLIC_INTERFACE
 function App() {
+  // Visually rich luxury e-commerce homepage layout
   return (
     <div className="app">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
@@ -214,11 +208,33 @@ function App() {
         <div className="container">
           <section className="hero" id="home" tabIndex={0} aria-label="Luxury hero section">
             <div className="subtitle">Unveil Your Elegance</div>
-            <h1 className="title">
-              Luxe Purple Cosmetics
-            </h1>
+            <h1 className="title">Luxe Purple Cosmetics</h1>
             <div className="description">
               Experience luxury and beauty redefined. Explore our world-class collection of high-end cosmetics and skincare, curated for those who demand exclusivity and sophistication.
+            </div>
+            {/* Hero feature image */}
+            <div style={{
+              width: '148px', 
+              height: '148px', 
+              borderRadius: '50%', 
+              margin: '24px auto 0 auto',
+              boxShadow: '0 7px 44px 0 rgba(174,171,163,0.19)',
+              background: 'linear-gradient(115deg, #d2b4de2a 50%, #aeaba3 100%)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <img
+                src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=facearea&w=320&q=80"
+                alt="Luxury cosmetics arranged in a flatlay"
+                style={{
+                  width: '110px',
+                  height: '110px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  boxShadow: '0 1.5px 8px 0 rgba(174,171,163,0.08)',
+                }}
+              />
             </div>
             <a href="#catalog" className="btn btn-large hero-cta" aria-label="Shop Now">
               Shop Now
@@ -226,13 +242,9 @@ function App() {
           </section>
 
           <ProductSearchFilter />
-
           <ProductCatalog />
-
           <Wishlist />
-
           <CheckoutSection />
-
           <CustomerReviews />
         </div>
       </main>
